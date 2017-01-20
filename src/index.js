@@ -17,13 +17,13 @@ const ArrayIncludesPolyfill = (() => {
         );
       }
 
-      var O = Object(this);
-      var len = parseInt(O.length, 10) || 0;
+      let O = Object(this),
+        len = parseInt(O.length, 10) || 0;
       if (len === 0) {
         return false;
       }
-      var n = parseInt(arguments[1], 10) || 0;
-      var k;
+      let n = parseInt(arguments[1], 10) || 0,
+        k;
       if (n >= 0) {
         k = n;
       } else {
@@ -32,7 +32,7 @@ const ArrayIncludesPolyfill = (() => {
           k = 0;
         }
       }
-      var currentElement;
+      let currentElement;
       while (k < len) {
         currentElement = O[k];
         if (
